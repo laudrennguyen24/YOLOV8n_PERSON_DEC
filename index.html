@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>YOLOv8 Person Detection</title>
+</head>
+<body>
+  <h1>Upload ảnh để phát hiện người</h1>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <input type="submit" value="Tải lên và phát hiện">
+  </form>
+
+  {% if output_image %}
+    <h2>Kết quả:</h2>
+    <img src="{{ output_image }}" style="max-width:600px;">
+  {% endif %}
+</body>
+</html>
